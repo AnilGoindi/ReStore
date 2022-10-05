@@ -10,6 +10,8 @@
 
   <ItemGroup>
     <None Remove="dotnet6files.zip" />
+    <None Remove="store.db-shm" />
+    <None Remove="store.db-wal" />
   </ItemGroup>
 
   <ItemGroup>
