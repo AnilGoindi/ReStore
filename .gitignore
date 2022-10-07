@@ -363,3 +363,4 @@ MigrationBackup/
 FodyWeavers.xsd
 /store.db-shm
 /store.db-wal
+/reported errors/Missing scripts.png
