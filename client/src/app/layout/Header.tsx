@@ -1,9 +1,22 @@
-﻿import { AppBar, Switch, Toolbar, Typography } from "@mui/material";
+﻿import { AppBar, List, ListItem, Switch, Toolbar, Typography } from "@mui/material";
+import { title } from "process";
+import { NavLink } from "react-router-dom";
 
 interface Props {
     darkMode: boolean;
     handleThemeChange: () => void;
 }
+
+const midLinks = [
+    { title: 'catalog', path: '/catalog' },
+    { title: 'about', path: '/about' },
+    { title: 'contact', path: '/contact' }
+]
+
+const rightLinks = [
+    { title: 'login', path: '/login' },
+    { title: 'register', path: '/register' }
+]
 
 export default function Header({ darkMode, handleThemeChange }: Props) {
     return (
@@ -13,6 +26,18 @@ export default function Header({ darkMode, handleThemeChange }: Props) {
                     RE-STORE
                 </Typography>
                 <Switch checked={darkMode} onChange={handleThemeChange} />
+                <List>
+                    {midLinks.map(({ title, path }) => (
+                        <ListItem
+                            component={NavLink}
+                        >
+                            {title.toUpperCase()}
+                        </ListItem>
+                    
+                        
+                    ))}
+
+                </List>
             </Toolbar>
         </AppBar>
     )
