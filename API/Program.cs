@@ -19,13 +19,28 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    //app.UseSwagger();
-    //app.UseSwaggerUI();
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
 
 
 app.UseAuthorization();
 
 app.MapControllers();
+
+//Create the database in code..
+var scope = app.Services.CreateScope();
+var context = scope.ServiceProvider.GetRequiredService<StoreContext>();
+var logger = scope.ServiceProvider.GetRequiredService<ILogger<Program>>(); 
+try
+{
+    context.Database.Migrate();
+    DbInitializer.Initialize(context);
+}
+catch (Exception ex)
+{
+    logger.LogError(ex, "A problem occurred during migration");
+}
+
 
 app.Run();
