@@ -127,3 +127,8 @@ D:\AnilDev\ReStore\api\bin\Debug\net8.0\runtimes\win-arm64\native\e_sqlite3.dll
 D:\AnilDev\ReStore\api\bin\Debug\net8.0\runtimes\win-x64\native\e_sqlite3.dll
 D:\AnilDev\ReStore\api\bin\Debug\net8.0\runtimes\win-x86\native\e_sqlite3.dll
 D:\AnilDev\ReStore\api\obj\Debug\net8.0\API.sourcelink.json
+D:\AnilDev\ReStore\api\bin\Debug\net8.0\Microsoft.OpenApi.dll
+D:\AnilDev\ReStore\api\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\AnilDev\ReStore\api\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\AnilDev\ReStore\api\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\AnilDev\ReStore\api\obj\Debug\net8.0\API.MvcApplicationPartsAssemblyInfo.cs
