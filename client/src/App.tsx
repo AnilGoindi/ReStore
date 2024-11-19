@@ -1,10 +1,17 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
 const [products, setProducts] = useState([
   {name: 'product1', price: 100.00},
   {name: 'product2', price: 200.00},
 ]);
+
+// Fetch product from API
+useEffect(() => {
+  fetch('http://localhost:5000/api/products')
+  .then(response => response.json())
+  .then(data => setProducts(data))
+}, []) // [] means only called once, i.e. loaded once
 
 function addProduct() {
   // ... spread operation peformed below for array
