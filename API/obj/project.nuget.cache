@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rOODu2rokQE=",
+  "dgSpecHash": "TGUTA/oI4Wo=",
   "success": true,
-  "projectFilePath": "D:\\AnilDev\\ReStore\\API\\API.csproj",
+  "projectFilePath": "D:\\AnilDev\\ReStore\\api\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ANIL\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\ANIL\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
