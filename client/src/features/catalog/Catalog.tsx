@@ -1,19 +1,26 @@
 import { Button } from "@mui/material";
 import { Product } from "../../app/models/product";
 import ProductList from "./ProductList";
-
-interface Props{
-    products: Product[]; // We are receiving a Product array from App.tsx
-    addProduct: () => void; // fn passed in no params currently
-}
+import { useState, useEffect } from "react";
 
 
 
-export default function Catalog({products, addProduct}: Props) {
+export default function Catalog() {
+    const [products, setProducts] = useState<Product[]>([]);
+
+    // Fetch product from API
+    useEffect(() => {
+      fetch('http://localhost:5000/api/products')
+      .then(response => response.json())
+      .then(data => setProducts(data))
+    }, []) // [] means only called once, i.e. loaded once
+    
+    
+
+
     return(
         <>   
             <ProductList products={products} />
-            <Button variant='contained' onClick={addProduct}>Add product</Button>
         </>
         
     )
