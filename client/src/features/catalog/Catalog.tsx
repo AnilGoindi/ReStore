@@ -1,3 +1,4 @@
+import agent from "../../app/api/agent";
 import { Product } from "../../app/models/product";
 import ProductList from "./ProductList";
 import { useState, useEffect } from "react";
@@ -9,13 +10,10 @@ export default function Catalog() {
 
     // Fetch product from API
     useEffect(() => {
-      fetch('http://localhost:5000/api/products')
-      .then(response => response.json())
-      .then(data => setProducts(data))
+      agent.Catalog.list().then(products => setProducts(products))
     }, []) // [] means only called once, i.e. loaded once
     
     
-
 
     return(
         <>   
