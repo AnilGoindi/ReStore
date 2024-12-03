@@ -9,6 +9,7 @@ import LoadingComponent from "../../app/layout/LoadingComponent";
 
 
 export default function ProductDetails() {
+//console.log("ProductDetails start..");
 const {id} = useParams<{id: string}>();
 const [product, setProduct] = useState<Product | null>(null);
 const [loading, setLoading] = useState(true);
